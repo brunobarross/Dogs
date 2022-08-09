@@ -11,6 +11,10 @@ const types = {
     message:
       'A senha precisa ter 1 caracter maiúsculo, 1 minúsculo e 1 digito. Com no mínimo 8 caracteres.',
   },
+  number: {
+    regex: /^\d+$/,
+    message: 'Utilize números apaenas',
+  },
 };
 
 //types[type] é a mesma coisa que types.email- utilizamos dessa forma pq type de useForm vem como string e string não pode ser usado dessa forma
