@@ -83,3 +83,7 @@ a{
     transform: translateX(0);
   }
 }
+
+.mainContainer {
+  margin-top: 4rem;
+}
