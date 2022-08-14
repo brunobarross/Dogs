@@ -1,6 +1,7 @@
 import React from 'react';
 import { COMMENT_POST } from '../../api';
 import enviar from '../../Assets/enviar.svg';
+import Enviar from '../Svgs/Enviar';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
 import styles from './PhotoCommentsForm.module.css';
@@ -31,7 +32,7 @@ const PhotoCommentsForm = ({ id, setComments }) => {
         onChange={({ target }) => setComment(target.value)}
       />
       <button className={styles.button}>
-        <img src={enviar} />
+        <Enviar />
       </button>
       <Error error={error} />
     </form>
