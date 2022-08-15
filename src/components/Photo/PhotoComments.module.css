@@ -1,8 +1,13 @@
 .comments{
   overflow-y: auto;
   word-break: break-word;
-  padding: 0.2rem;
+  padding: 0 2rem;
 }
+
+.single.comments {
+  padding: 0px;
+}
+
 .comments li {
   margin-bottom: .5rem;
   line-height: 1.2;

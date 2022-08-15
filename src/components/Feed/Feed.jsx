@@ -1,6 +1,7 @@
 import React from 'react';
 import FeedModal from './FeedModal';
 import FeedPhotos from './FeedPhotos';
+import propTypes from 'prop-types';
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
@@ -12,7 +13,6 @@ const Feed = ({ user }) => {
 
     function infiniteScroll() {
       if (infinite) {
-        console.log(infinite);
         //comparamos o scroll e o height do body e chego se ele tem 75% da altura pelo menos ;
         const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
@@ -52,6 +52,18 @@ const Feed = ({ user }) => {
       })}
     </div>
   );
+};
+
+//seto padrão pra não retornar undefined
+Feed.defaultProps = {
+  user: 0,
+};
+
+Feed.propTypes = {
+  user: propTypes.oneOfType([
+    propTypes.string.isRequired,
+    propTypes.number.isRequired,
+  ]),
 };
 
 export default Feed;
