@@ -12,6 +12,7 @@ body{
   --type-second: 'Spectral', georgia;
   font-family: var(--type-first);
   padding-top: 4rem;
+  overflow-x: hidden;
 }
 
 
@@ -96,4 +97,9 @@ a{
 
 .AppBody {
   flex: 1;
+
+}
+
+.VictoryContainer{
+height: initial !important;
 }

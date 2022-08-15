@@ -14,7 +14,7 @@ const FeedPhotos = ({ setInfinite, page, user, setModalPhoto }) => {
       const total = 3;
       const { url, options } = PHOTOS_GET({ page, total, user });
       const { response, json } = await request(url, options);
-      console.log(json.length, total);
+
       if (response && response.ok && json.length < total) {
         setInfinite(false);
         console.log('trava');
